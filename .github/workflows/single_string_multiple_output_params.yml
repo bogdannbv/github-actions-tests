@@ -1,0 +1,22 @@
+name: Single string with multiple output parameters
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  bump-version:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Output multiple parameters
+        id: params
+        run: echo "param1=1\nparam2=2" >> $GITHUB_OUTPUT
+
+      - name: Read params
+        run: |
+          echo "param1: ${{ steps.params.outputs.param1 }}"
+          echo "param2: ${{ steps.params.outputs.param2 }}"
