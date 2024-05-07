@@ -1,13 +1,11 @@
 name: Single string with multiple output parameters
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
 
-  bump-version:
+  single_string_multiple_output_params:
 
     runs-on: ubuntu-latest
 
