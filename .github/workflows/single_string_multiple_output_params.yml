@@ -16,5 +16,5 @@ jobs:
 
       - name: Read params
         run: |
-          echo "param1: ${{ steps.params.outputs.param1 }}"
-          echo "param2: ${{ steps.params.outputs.param2 }}"
+          echo "param1: ${{ steps.params.outputs.bumped }}"
+          echo "param2: ${{ steps.params.outputs.message }}"
